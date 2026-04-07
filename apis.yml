@@ -10,11 +10,11 @@ created: '2025-03-01'
 modified: '2026-03-16'
 position: Consumer
 tags:
-  - Groceries
-  - Food
   - Data
-  - Restaurants
+  - Food
+  - Groceries
   - Menus
+  - Restaurants
 url: >-
   https://raw.githubusercontent.com/api-evangelist/foodspark/refs/heads/main/apis.yml
 specificationVersion: '0.19'
@@ -22,11 +22,11 @@ apis:
   - aid: foodspark:foodspark
     name: Foodspark
     tags:
-      - Groceries
-      - Food
       - Data
-      - Restaurants
+      - Food
+      - Groceries
       - Menus
+      - Restaurants
     humanURL: https://www.foodspark.io/food-data-api/
     properties:
       - url: https://www.foodspark.io/food-data-api/
