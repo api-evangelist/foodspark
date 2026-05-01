@@ -1,42 +1,50 @@
 # Foodspark (foodspark)
-Foodspark is a leading online platform that connects food enthusiasts with unique and delicious dining experiences. Our website features a curated selection of restaurants, food festivals, cooking classes, and more, allowing users to discover and book exciting culinary adventures. Whether you're a foodie looking to try a new restaurant or a home cook seeking inspiration, Foodspark has something for everyone. With our easy-to-use interface and user-friendly features, finding and booking your next food experience has never been easier. Join Foodspark today and let your taste buds spark with delight!
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/foodspark/refs/heads/main/apis.yml)
+Foodspark is a data-as-a-service platform delivering real-time grocery,
+restaurant, and food-delivery data extracted from 100+ platforms including
+DoorDash, Uber Eats, Grubhub, Instacart, McDonald's, Starbucks, and many
+others. Foodspark sells access to curated food and grocery datasets rather
+than a publicly documented self-serve API.
+
+**APIs.json:** [apis.yml](https://raw.githubusercontent.com/api-evangelist/foodspark/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consumer 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Groceries, Food, Data, Restaurants, Menus
-
-## Timestamps
-
-- **Created:** 2025-03-01 
-- **Modified:** 2025-04-07 
+Data, Food, Groceries, Menus, Restaurants, Food Delivery, Web Scraping
 
 ## APIs
 
-### Foodspark
-Get real-time grocery and food data APIs to scrape key food data insights in a quick and hassle-free manner. Foodspark provides restaurant API, food and grocery pricing API, restaurant menu API, and more for leading brands across the globe. Our food and restaurant data scrapers let you extract the required data in the desired format. 
+### Foodspark Food Data Service
 
-**Human URL:** [ https://www.foodspark.io/food-data-api/]( https://www.foodspark.io/food-data-api/)
+Foodspark provides a restaurant data API, food and grocery pricing API,
+restaurant menu API, and aggregated food-delivery data sourced from 100+
+platforms. Specific endpoint, authentication, and pricing details are shared
+with customers post-engagement; no public OpenAPI specification is published.
 
+- **Human URL:** https://www.foodspark.io/food-data-api/
+- **Pricing:** https://www.foodspark.io/pricing/
+- **Contact:** https://www.foodspark.io/contact/
 
-#### Tags:
+## Coverage highlights (sourced platforms)
 
- - Groceries, Food, Data, Restaurants, Menus
+- Food delivery: DoorDash, Uber Eats, Grubhub, Zomato, Swiggy, Deliveroo, Wolt, Glovo, Foodpanda, Just Eat
+- QSR / restaurant chains: McDonald's, Starbucks, Subway, Chipotle, KFC, Domino's, Pizza Hut, Burger King, Taco Bell, Wendy's
+- Grocery: Instacart, Safeway, BigBasket, Ocado, Costco, Amazon Fresh, Kroger, Gopuff, Walmart
 
-#### Properties
+## Common Properties
 
-- [Documentation]( https://www.foodspark.io/food-data-api/)
+- [Website](https://www.foodspark.io/)
+- [Documentation](https://www.foodspark.io/food-data-api/)
+- [Pricing](https://www.foodspark.io/pricing/)
+- [Contact Sales](https://www.foodspark.io/contact/)
 
 ## Maintainers
 
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
-
+- **FN:** Kin Lane
+- **Email:** kin@apievangelist.com
