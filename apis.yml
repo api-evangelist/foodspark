@@ -47,6 +47,8 @@ apis:
       - type: ContactSales
         url: https://www.foodspark.io/contact/
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/foodspark
   - type: Website
     url: https://www.foodspark.io/
   - type: Documentation
