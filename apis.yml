@@ -57,6 +57,8 @@ common:
     url: https://www.foodspark.io/pricing/
   - type: ContactSales
     url: https://www.foodspark.io/contact/
+  - type: LLMsTxt
+    url: https://www.foodspark.io/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
