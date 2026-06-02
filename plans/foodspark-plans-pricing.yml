@@ -4,139 +4,58 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Foodspark
 providerId: foodspark
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-06-02'
+reconciled: true
 tags:
   - Data
   - Food
   - Groceries
-  - Menus
   - Restaurants
-  - Food Delivery
   - Web Scraping
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+description: >-
+  Foodspark prices as a managed data-as-a-service / web-scraping engagement, not
+  a self-serve metered API. There are no published Free/Pro/Enterprise tiers and
+  no public per-request price list. The pricing page states cost depends on data
+  set volume and complexity, the count of websites and platforms targeted, the
+  rate of scraping, and any extra robust-crawling requirements, then directs
+  prospects to request a custom quote. Engagement is sales-led ("Request a
+  Quote", contact sales@foodspark.io); endpoint, authentication, and delivery
+  details are shared with customers post-engagement.
+sources:
+  - https://www.foodspark.io/pricing/
+  - https://www.foodspark.io/food-data-api/
+  - https://www.foodspark.io/contact/
 plans:
-  - id: foodspark-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Foodspark API surface. Intended for evaluation, prototyping,
-      and low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Foodspark Food Data Service
-  - id: foodspark-pro
-    name: Professional
-    type: paid
-    description: Production tier for Foodspark. Provides higher quotas, priority support, and access to
-      the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Foodspark Food Data Service
-  - id: foodspark-enterprise
-    name: Enterprise
+  - id: foodspark-custom-data-service
+    name: Custom Data Service
     type: enterprise
-    description: Custom-negotiated tier for Foodspark. Includes dedicated capacity, contractual SLAs,
-      security review, data residency options, and named technical account management.
+    description: >-
+      Quote-based managed food, grocery, restaurant, and food-delivery data
+      extraction engagement scoped to the customer's target platforms, volume,
+      refresh rate, and delivery format. All pricing is custom-negotiated.
     entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
+      - label: Engagement
+        description: >-
+          Custom-scoped scraping / data-extraction engagement. Cost is
+          determined by data set volume and complexity, the count of target
+          websites and platforms, the scraping / refresh rate, and any
+          robust-crawling requirements. Quoted per project.
+        name: engagement
+        type: flat
+        metric: varies
         limit: -1
-        timeFrame: month
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
+        timeFrame: usage
+        geo: global
         domains: []
         unit: 1
         price: custom
         userMultiplied: false
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
+      - name: Custom Data Set Scoping
+      - name: Multi-Platform Coverage (100+ Sources)
+      - name: Choice of Delivery Format (CSV / JSON / XML / Feed)
+      - name: Configurable Refresh / Scraping Rate
+      - name: Dedicated Project / Account Management
       - name: Foodspark Food Data Service
 maintainers:
   - FN: Kin Lane

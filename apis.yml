@@ -10,7 +10,7 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2025-03-01'
-modified: '2026-04-28'
+modified: '2026-06-02'
 position: Consumer
 tags:
   - Data
@@ -59,6 +59,12 @@ common:
     url: https://www.foodspark.io/contact/
   - type: LLMsTxt
     url: https://www.foodspark.io/llms.txt
+  - type: Plans
+    url: plans/foodspark-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/foodspark-rate-limits.yml
+  - type: FinOps
+    url: finops/foodspark-finops.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

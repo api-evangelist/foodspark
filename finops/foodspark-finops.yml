@@ -1,5 +1,6 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -9,128 +10,76 @@ alignedWith:
 provider: Foodspark
 providerId: foodspark
 publisherName: Foodspark
-serviceCategory: API
+serviceCategory: Data-as-a-Service
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-06-02'
+reconciled: true
 tags:
   - Data
   - Food
   - Groceries
-  - Menus
   - Restaurants
-  - Food Delivery
   - Web Scraping
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Foodspark API surface. Provides a FOCUS-aligned mapping
-  for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+description: >-
+  FOCUS-aligned FinOps view for Foodspark, a custom-quoted managed food / grocery
+  / restaurant data-extraction service. Spend is project-based and
+  contract-negotiated (not self-serve usage-metered), so cost shows up as
+  recurring data-service charges scoped by target platforms, data volume, and
+  refresh cadence.
+sources:
+  - https://www.foodspark.io/pricing/
+  - https://www.foodspark.io/food-data-api/
+  - https://www.foodspark.io/contact/
 principles:
   - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
+    description: >-
+      Foodspark exposes no self-serve usage dashboard or billing API. Track spend
+      from the negotiated contract and Foodspark invoices; reconcile delivered
+      data volume against the agreed project scope.
   - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
+    description: >-
+      Attribute the data-service contract to the consuming team, product, and
+      data domain (menus, pricing, delivery) since billing is project-scoped
+      rather than per-call.
   - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
+    description: >-
+      Control cost by narrowing the target platform list, reducing extracted
+      field/record scope, and lowering refresh cadence to the minimum the use
+      case needs, since each materially affects the quote.
   - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+    description: >-
+      Assign a contract owner to review scope versus delivered data each billing
+      period and to renegotiate platform coverage and refresh rate as needs change.
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Custom / Quote-Based
+  billingFrequency: Per-Contract
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
     - Tax
-    - Credit
-    - Adjustment
   chargeFrequency: Recurring
 focusColumns:
-  ServiceName: Foodspark
-  ServiceCategory: Developer Tools / API
+  ServiceName: Foodspark Food Data Service
+  ServiceCategory: Data-as-a-Service
   ProviderName: Foodspark
   PublisherName: Foodspark
   InvoiceIssuerName: Foodspark
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PricingCategory: Custom / Quote-Based
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: data_service_engagement
+    description: >-
+      Project / contract-level managed data-extraction charge; the billable unit
+      is the negotiated engagement, scoped by platforms, volume, and cadence.
+    unit: varies
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
-    dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: Foodspark Food Data Service
-    baseURL: ''
-    tags:
-      - Data
-      - Food
-      - Groceries
-      - Menus
-      - Restaurants
-    serviceName: Foodspark Food Data Service
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+      - target_platform
+      - data_domain
+      - refresh_cadence
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
