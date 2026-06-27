@@ -57,7 +57,7 @@ common:
     url: https://www.foodspark.io/pricing/
   - type: ContactSales
     url: https://www.foodspark.io/contact/
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://www.foodspark.io/llms.txt
   - type: Plans
     url: plans/foodspark-plans-pricing.yml
