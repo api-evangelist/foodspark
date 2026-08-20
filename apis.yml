@@ -29,6 +29,14 @@ tags:
   - Food
   - Groceries
   - Menus
+  - Restaurant
+  - Food Delivery
+  - Web Scraping
+tags_raw:
+  - Data
+  - Food
+  - Groceries
+  - Menus
   - Restaurants
   - Food Delivery
   - Web Scraping
@@ -39,6 +47,12 @@ apis:
   - aid: foodspark:foodspark-data
     name: Foodspark Food Data Service
     tags:
+      - Data
+      - Food
+      - Groceries
+      - Menus
+      - Restaurant
+    tags_raw:
       - Data
       - Food
       - Groceries
