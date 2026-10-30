@@ -1,4 +1,4 @@
-# Foodspark (foodspark)
+# Foodspark
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,80 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Foodspark is a managed data-as-a-service / web-scraping platform delivering
-grocery, restaurant, and food-delivery data extracted from 100+ platforms
-including DoorDash, Uber Eats, Grubhub, Instacart, McDonald's, Starbucks, and
-many others. Foodspark sells access to curated, custom-scoped food and grocery
-datasets through a sales-led engagement rather than a publicly documented
-self-serve API. There is no public OpenAPI specification, developer portal, or
-self-serve API key; endpoint, authentication, and delivery details are shared
-with customers post-engagement.
+Foodspark is a data-as-a-service platform that delivers real-time grocery, restaurant, and food-delivery data extracted from 100+ platforms including DoorDash, Uber Eats, Grubhub, Instacart, McDonald's, Starbucks, and many others. Foodspark sells access to curated food and grocery datasets rather than a publicly documented self-serve API.
 
-**URL:** [APIs.json](https://raw.githubusercontent.com/api-evangelist/foodspark/refs/heads/main/apis.yml)
+**Areas:** Data · Food · Groceries · Menus · Restaurant · Food Delivery · Web Scraping
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Foodspark on APIs.io
 
-## Tags
+Everything profiled for Foodspark is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/foodspark/](https://apis.io/providers/foodspark/)** — or go straight to one of the APIs or properties below.
 
-Data, Food, Groceries, Menus, Restaurants, Food Delivery, Web Scraping
+### APIs (1)
 
-## Timestamps
+- [Foodspark Food Data Service](https://apis.io/apis/foodspark/foodspark-data/) — Foodspark provides a restaurant data API, food and grocery pricing API, restaurant menu API, and aggregated food-delivery data sourced from 100+ platforms.…
 
-- **Created:** 2025-03-01
-- **Modified:** 2026-06-02
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Foodspark Food Data Service
+#### Security (1)
 
-Foodspark markets a restaurant data API, food and grocery pricing API,
-restaurant menu API, and aggregated food-delivery data sourced from 100+
-platforms. In practice these are managed extraction services: the public "API"
-pages are marketing landing pages with sample JSON output, not self-serve
-endpoints. Specific endpoint, authentication, and pricing details are shared
-with customers post-engagement; no public OpenAPI specification is published.
+Authentication, trust centre, and vulnerability disclosure.
 
-**Human URL:** [https://www.foodspark.io/food-data-api/](https://www.foodspark.io/food-data-api/)
+- [Foodspark Domain Security](https://apis.io/security/foodspark/foodspark-domain-security/)
 
-#### Tags:
+#### Plans and pricing (1)
 
- - Data, Food, Groceries, Menus, Restaurants
+Published plans, tiers and prices.
 
-#### Properties
+- [Foodspark Plans Pricing](https://apis.io/plans/foodspark/foodspark-plans-pricing/)
 
-- [Documentation](https://www.foodspark.io/food-data-api/)
-- [Pricing](https://www.foodspark.io/pricing/)
-- [Contact Sales](https://www.foodspark.io/contact/)
+#### Rate limits (1)
 
-## Coverage Highlights (Sourced Platforms)
+Published request limits.
 
-- Food delivery: DoorDash, Uber Eats, Grubhub, Zomato, Swiggy, Deliveroo, Wolt, Glovo, Foodpanda, Just Eat
-- QSR / restaurant chains: McDonald's, Starbucks, Subway, Chipotle, KFC, Domino's, Pizza Hut, Burger King, Taco Bell, Wendy's
-- Grocery: Instacart, Safeway, BigBasket, Ocado, Costco, Amazon Fresh, Kroger, Gopuff, Walmart
+- [Foodspark Rate Limits](https://apis.io/rate-limits/foodspark/foodspark-rate-limits/)
 
-## Common Properties
+#### FinOps (1)
 
-- [LinkedIn](https://www.linkedin.com/company/foodspark)
+What the API costs to run, by operation.
+
+- [Foodspark Finops](https://apis.io/finops/foodspark/foodspark-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.foodspark.io/)
 - [Documentation](https://www.foodspark.io/food-data-api/)
 - [Pricing](https://www.foodspark.io/pricing/)
-- [Contact Sales](https://www.foodspark.io/contact/)
-- [LLMs.txt](https://www.foodspark.io/llms.txt)
-- [Plans](plans/foodspark-plans-pricing.yml)
-- [Rate Limits](rate-limits/foodspark-rate-limits.yml)
-- [FinOps](finops/foodspark-finops.yml)
+- [Blog](https://www.foodspark.io/blog/)
 
-## Commercial Artifacts
+## API Evangelist rating
 
-Machine-readable commercial profile reflecting Foodspark's custom, quote-based
-managed-data-service model (no self-serve metered API).
+**Kin Score 11.3** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-- [Plans & Pricing](plans/foodspark-plans-pricing.yml) — API Commons Plans 0.1; single custom/quote-based engagement plan
-- [Rate Limits](rate-limits/foodspark-rate-limits.yml) — API Commons Rate Limits 0.1; negotiated cadence, no public per-key throttle
-- [FinOps](finops/foodspark-finops.yml) — FOCUS-aligned; project-based recurring data-service charges
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 15.8 |
 
-## Maintainers
+**Agent readiness 0.6** — human-only
 
-**FN:** Kin Lane
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-**Email:** kin@apievangelist.com
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/foodspark/](https://apis.io/providers/foodspark/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Foodspark: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/foodspark/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
